@@ -30,3 +30,6 @@
 	margin-left:auto;
 	margin-right:auto;
 }
+.img-container img{
+	padding-bottom:100px;
+}
