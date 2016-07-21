@@ -1,16 +1,21 @@
 #title{
-	position:absolute;
-	width: 30%;
+	position:relative;
+	width: 573px;
 	margin-left: 20%;
 	top:0;
 	padding-top: 40px;
 }
 #bowtitle{
-	position:absolute;
+	position:relative;
 	top:0;
-	width: 10%;
-    margin-left: 70%;
+	width: 191px;
+	margin-right:20%;
+	float:right;
     padding-top: 130px
+}
+.fadeouttitle{
+	width: 80%;
+	max-width: 1400px;
 }
 .navbar-fixed-top {
     position: absolute;
@@ -25,11 +30,14 @@
 }
 .img-container{
 	position: relative;
-	margin-top: 580px;
+	margin-top: 180px;;
 	width:1000px;
 	margin-left:auto;
 	margin-right:auto;
 }
 .img-container img{
 	padding-bottom:100px;
+}
+.nav{
+	font-size: 18px;
 }
