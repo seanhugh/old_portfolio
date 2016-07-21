@@ -7,15 +7,28 @@ var image2 = "winford-01.png";
 var title2 = "Beer Guys";
 var pg2 = "This is the Beer Guys Paragraph Yaw"
 
-function add5images() {
+images_left = 2;
 
-  for (var i = 1; i <= 5; i++) {
-      console.log("i began");
-      i = i.toString();
-      var temp = "image" + (i);
-      $( "#thecontainer" ).append( "<div class='bigim'><img src='images/blog/"+ eval(temp) + "''></div>" );
-      console.log(temp);
+function addimg(i) {
+i = i.toString();
+var temp = "image" + (i);
+$( "#thecontainer" ).append( "<div class='bigim'><img src='images/blog/"+ eval(temp) + "''><div class='coverdis'></div></div>" );
+  }
+
+
+function add5images() {
+if (images_left>=5) {
+      for (var i = 1; i <= 5; i++) {
+      addimg(i);
+      images_left-=1;
   };
+} else { 
+    for (var i = 1; i <= images_left; i++) {
+      addimg(i);
+  };
+  images_left=0;
+}
+
 };
 
 $(document).ready(function() {
@@ -30,9 +43,32 @@ $(document).ready(function() {
     }
     if ($(window).scrollTop() < 421) {
       var opacvar = (420-(2*$(window).scrollTop()))/420;
-      console.log(opacvar);
       $('#fadeouttitle').css('opacity', opacvar);
       $('#navbar').removeClass('fixdis');
     }
+//fading in stuff here:::::
+   
+      $(function () {
+      $('.bigim').each(function(){
+        var _this = this;
+        var middle = ($( window ).height()/2) + $(window).scrollTop();
+        var middlepic = $(this).offset().top + ($(this).height()/2);
+        console.log(middle);
+        console.log(middlepic);
+        var difference = Math.abs(middle-middlepic);
+        console.log(difference);
+
+        if (difference < ($(this).height()/2) + ($( window ).height())/2) {
+         var opacvar = 150/difference;
+         $(this).css('opacity', opacvar);
+        }
+
+
+        });
+    });
+
+//my stuff ends here
+
+
   });
 });
