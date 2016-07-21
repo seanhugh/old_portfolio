@@ -1,4 +1,9 @@
 #title{
 	width: 30%;
     margin-left: 20%;
+    padding-top: 40px
+}
+.navbar-fixed-top {
+    position: absolute;
+    top:420px;
 }
