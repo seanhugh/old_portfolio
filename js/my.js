@@ -31,8 +31,28 @@ if (images_left>=5) {
 
 };
 
+
+function scrollopac() {
+      $('.bigim').each(function(){
+        var _this = this;
+        var middle = ($( window ).height()/2) + $(window).scrollTop();
+        var middlepic = $(this).offset().top + 500;
+        var difference = Math.abs(middle-middlepic);
+        console.log(difference);
+        if (difference < ($(this).height()/2) + ($( window ).height())/2) {
+         var opacvar = 150/difference;
+         $(this).css('opacity', opacvar);
+        }
+
+
+        });
+};
+
+
+
 $(document).ready(function() {
       add5images();
+      scrollopac();
   $(window).scroll(function () {
 
       //if you hard code, then use console
@@ -48,24 +68,7 @@ $(document).ready(function() {
     }
 //fading in stuff here:::::
    
-      $(function () {
-      $('.bigim').each(function(){
-        var _this = this;
-        var middle = ($( window ).height()/2) + $(window).scrollTop();
-        var middlepic = $(this).offset().top + ($(this).height()/2);
-        console.log(middle);
-        console.log(middlepic);
-        var difference = Math.abs(middle-middlepic);
-        console.log(difference);
-
-        if (difference < ($(this).height()/2) + ($( window ).height())/2) {
-         var opacvar = 150/difference;
-         $(this).css('opacity', opacvar);
-        }
-
-
-        });
-    });
+      scrollopac();
 
 //my stuff ends here
 
