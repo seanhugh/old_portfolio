@@ -7,10 +7,17 @@
 #bowtitle{
 	position:absolute;
 	width: 10%;
-    margin-left: 60%;
+    margin-left: 70%;
     padding-top: 130px
 }
 .navbar-fixed-top {
     position: absolute;
     top:420px;
+}
+.img-container{
+	height:5000px;
+}
+.fixdis{
+	position:fixed;
+	top:0;
 }
