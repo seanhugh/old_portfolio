@@ -12,7 +12,9 @@ images_left = 2;
 function addimg(i) {
 i = i.toString();
 var temp = "image" + (i);
-$( "#thecontainer" ).append( "<div class='bigim'><img src='images/blog/"+ eval(temp) + "''><div class='coverdis'></div></div>" );
+var title = "title" + (i);
+var pg = "pg" + (i);
+$( "#thecontainer" ).append( "<div class='bigim'><img class = 'theim' src='images/blog/"+ eval(temp) + "''><div class='coverdis'><div class='hovert'><h1 class='hovertitle animated bounceInLeft'>"+eval(title)+"</h1><p class = 'hovertext'>"+eval(pg)+"</p></div></div></div>" );
   }
 
 
@@ -41,7 +43,8 @@ function scrollopac() {
         console.log(difference);
         if (difference < ($(this).height()/2) + ($( window ).height())/2) {
          var opacvar = 150/difference;
-         $(this).css('opacity', opacvar);
+
+         $(".theim", this).css('opacity', opacvar);
         }
 
 
@@ -61,9 +64,10 @@ $(document).ready(function() {
     if ($(window).scrollTop() > 420) {
       $('#navbar').addClass('fixdis');
     }
-    if ($(window).scrollTop() < 421) {
+    if ($(window).scrollTop() < 420) {
       var opacvar = (420-(2*$(window).scrollTop()))/420;
       $('#fadeouttitle').css('opacity', opacvar);
+      $('#fadeouttitle').css('top', $(window).scrollTop());
       $('#navbar').removeClass('fixdis');
     }
 //fading in stuff here:::::
