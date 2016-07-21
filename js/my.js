@@ -1,20 +1,28 @@
 
 var image1 = "beerguys.png";
 var title1 = "Beer Guys";
-var pg1 = "This is the Beer Guys Paragraph Yaw"
+var pg1 = "A logo design company for a small liquor <br> retailer and beer yard"
 
 var image2 = "winford-01.png";
-var title2 = "Beer Guys";
-var pg2 = "This is the Beer Guys Paragraph Yaw"
+var title2 = "Winford Plumbing and HVAC";
+var pg2 = "Logo design and mockup for a <br> small pumbing business"
 
-images_left = 2;
+var image3 = "precision-01.png";
+var title3 = "Precision Athletics";
+var pg3 = "Logo design and mockup for a small Gym in <br>Brooklyn looking for a modern aesthetic"
+
+var image4 = "chris-01.png";
+var title4 = "Xotic Detailing";
+var pg4 = "Logo and Brandig for start-up detailing company"
+
+images_left = 4;
 
 function addimg(i) {
 i = i.toString();
 var temp = "image" + (i);
 var title = "title" + (i);
 var pg = "pg" + (i);
-$( "#thecontainer" ).append( "<div class='bigim'><img class = 'theim' src='images/blog/"+ eval(temp) + "''><div class='coverdis'><div class='hovert'><h1 class='hovertitle animated bounceInLeft'>"+eval(title)+"</h1><p class = 'hovertext'>"+eval(pg)+"</p></div></div></div>" );
+$( "#thecontainer" ).append( "<div class='bigim'><img class = 'theim' src='images/blog/"+ eval(temp) + "''><div class='coverdis'><img id='whitebow' src='images/whitebow.svg'><div class='hovert'><h1 class='hovertitle animated bounceInLeft'>"+eval(title)+"</h1><p class = 'hovertext'>"+eval(pg)+"</p></div></div></div>" );
   }
 
 
@@ -38,7 +46,7 @@ function scrollopac() {
       $('.bigim').each(function(){
         var _this = this;
         var middle = ($( window ).height()/2) + $(window).scrollTop();
-        var middlepic = $(this).offset().top + 500;
+        var middlepic = $(this).offset().top + 350;
         var difference = Math.abs(middle-middlepic);
         console.log(difference);
         if (difference < ($(this).height()/2) + ($( window ).height())/2) {
