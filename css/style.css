@@ -113,6 +113,40 @@ p{
 .abouth1{
 	font-size: 32px;
 }
+em.name {
+    font-style: normal;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 26px;
+}
+/*.navbar-fixed-top {
+    position: relative;
+    margin-top: 20px;
+}*/
+.invisible{
+	display: none;
+}
+#staticbar{
+	margin-top: 20px;
+}
+.navbar-fixed-top{
+	margin-top: 0px!important;
+}
+.spacedis{
+	margin-top: 112px;
+}
+#mobilebow{
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    margin-left: -25px !important;
+    margin-top: 4px;
+    display:none;
+}
+
+
+
+/*MOBILE STUFF GOES HERE*/
+
 @media screen and (max-width:760px){
 
 .aboutcontainer{
@@ -138,28 +172,8 @@ p{
 .hovertext {
     font-size: 15px;
 }
+#mobilebow{
+	display: block;
+}
 
-
-
-}
-em.name {
-    font-style: normal;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 26px;
-}
-/*.navbar-fixed-top {
-    position: relative;
-    margin-top: 20px;
-}*/
-.invisible{
-	display: none;
-}
-#staticbar{
-	margin-top: 20px;
-}
-.navbar-fixed-top{
-	margin-top: 0px!important;
-}
-.spacedis{
-	margin-top: 112px;
 }
