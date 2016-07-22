@@ -55,6 +55,7 @@ dimages_left=4;
 var whichcategory = 0;
 
 
+
 function addimg(i) {
 i = i.toString();
 if(whichcategory==0){
@@ -102,29 +103,38 @@ function scrollopac() {
 
          $(".theim", this).css('opacity', opacvar);
         }
+        else{
+          $(".theim", this).css('opacity', .3);
+        }
 
 
         });
 };
 
-
+function addabout() {
+$( "#thecontainer" ).append( "<div class='aboutcontainer'><h1 class = 'abouth1'>Hello.</h1><p class='biop'>My name is <em class = 'name'>Sean Hughes</em> and I'm a web, graphic, and 3D designer.</p><p class='biop'>I am currently a computer science major at Harvard University, and a competitive squash player both indivudally and for Harvard's team.</p><p class = 'biop'>Contact me through my <a class = 'bioa' href='#'>Email</a>, or <a class = 'bioa' href='#'>Give me a call</a> if you'd like to talk.</p></div>" );
+}
 
 $(document).ready(function() {
       add5images();
       scrollopac();
+      var whattopwas = $('#navbar').offset().top;
   $(window).scroll(function () {
 
       //if you hard code, then use console
       //.log to determine when you want the 
       //nav bar to stick.  
-    if ($(window).scrollTop() > 420) {
+    if ($(window).scrollTop() >= whattopwas) {
       $('#navbar').addClass('fixdis');
+      $('#thecontainer').addClass('spacedis');
+
     }
-    if ($(window).scrollTop() < 420) {
+    else if ($(window).scrollTop() < whattopwas) {
       var opacvar = (420-(2*$(window).scrollTop()))/420;
       $('#fadeouttitle').css('opacity', opacvar);
       $('#fadeouttitle').css('top', $(window).scrollTop());
       $('#navbar').removeClass('fixdis');
+      $('#thecontainer').removeClass('spacedis');
     }
 //fading in stuff here:::::
    
@@ -141,8 +151,9 @@ $(document).ready(function() {
   $( "#thecontainer" ).css('display', 'none');
   add5images();
   $( "#thecontainer" ).fadeIn();
-  $( "#graphic" ).removeClass( "active" )
+  $("#navbar ul>li.active").removeClass("active");
   $( "#3d" ).addClass( "active" )
+  scrollopac();
 });
 
 
@@ -153,10 +164,21 @@ $(document).ready(function() {
     $( "#thecontainer" ).css('display', 'none');
   add5images();
    $( "#thecontainer" ).fadeIn();
+  $("#navbar ul>li.active").removeClass("active");
   $( "#graphic" ).addClass( "active" )
-  $( "#3d" ).removeClass( "active" )
+  scrollopac();
 });
 
+  $( "#aboutbutton" ).click(function() {
+  $( "#thecontainer" ).empty();
+  whichcategory = 2;
+    $( "#thecontainer" ).css('display', 'none');
+  addabout();
+   $( "#thecontainer" ).fadeIn();
+  $("#navbar ul>li.active").removeClass("active");
+  $( "#about" ).addClass( "active" )
+  scrollopac();
+});
 
 
 
