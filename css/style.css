@@ -64,7 +64,7 @@
 .bigim{
 	position:relative;
 	height:auto;
-	border-bottom:100px;
+	margin-bottom: 40px;
 }
 .hovertitle {
 text-align: left;
@@ -102,4 +102,7 @@ text-align: left;
 }
 .coverdis:hover #whitebow{
 	width: 10%
+}
+nav li {
+    cursor: pointer;
 }

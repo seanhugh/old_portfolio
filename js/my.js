@@ -1,4 +1,4 @@
-
+//HERE GOES ALL THE GRAPHIC DESIGN IMAGES
 var image1 = "beerguys.png";
 var title1 = "Beer Guys";
 var pg1 = "A logo design company for a small liquor <br> retailer and beer yard"
@@ -15,28 +15,77 @@ var image4 = "chris-01.png";
 var title4 = "Xotic Detailing";
 var pg4 = "Logo and Brandig for start-up detailing company"
 
-images_left = 4;
+var image5 = "wellness.png";
+var title5 = "Taxoma Wellness";
+var pg5 = "Logo and Brandig for a Hollistic Healing center's <br> new Thermography Program"
+
+var image6 = "charlie.png";
+var title6 = "Charlie the Tuna";
+var pg6 = "Logo and Brandig for a fishing company in Alaska <br> Is now on multiple boats and buildings"
+
+var image7 = "nickandgreg.png";
+var title7 = "Slow Motion Gentlemen Logo";
+var pg7 = "Made logo and introduction video for <br> startup YouTube channel"
+images_left = 7;
+var originalimages_left = 7;
+
+//HERE GOES ALL THE 3DDESIGN IMAGES
+
+
+
+var dimage1 = "america.png";
+var dtitle1 = "Scrap Wood USA";
+var dpg1 = "This piece was handmade from recycled <br>items around the shop";
+
+var dimage2 = "pingpong.png";
+var dtitle2 = "Unique Hand Made<br> Ping Pong Paddle";
+var dpg2 = "This unique paddle not only looks the part <br> but also provides extra spin and power"
+
+var dimage3 = "sunglasses-01.png";
+var dtitle3 = "Bamboo Sunglasses";
+var dpg3 = "Laser cut and designed in illustrator <br>Hand Sanded and Constructed"
+
+var dimage4 = "boatdecal.png";
+var dtitle4 = "Glass decal of wolf and dolphin design";
+var dpg4 = "My design has gained popularity in Alaska and is <br> now on muliple people as tatoos"
+
+dimages_left=4;
+
+
+var whichcategory = 0;
+
 
 function addimg(i) {
 i = i.toString();
-var temp = "image" + (i);
+if(whichcategory==0){
+     var temp = "image" + (i);
 var title = "title" + (i);
 var pg = "pg" + (i);
+} else{
+  var temp = "dimage" + (i);
+var title = "dtitle" + (i);
+var pg = "dpg" + (i);
+}
 $( "#thecontainer" ).append( "<div class='bigim'><img class = 'theim' src='images/blog/"+ eval(temp) + "''><div class='coverdis'><img id='whitebow' src='images/whitebow.svg'><div class='hovert'><h1 class='hovertitle animated bounceInLeft'>"+eval(title)+"</h1><p class = 'hovertext'>"+eval(pg)+"</p></div></div></div>" );
   }
 
 
 function add5images() {
-if (images_left>=5) {
+if(whichcategory==0){
+     images = images_left;
+} else{
+  images = dimages_left;
+}
+if (images>=50) {
       for (var i = 1; i <= 5; i++) {
       addimg(i);
-      images_left-=1;
+      images-=1;
   };
 } else { 
-    for (var i = 1; i <= images_left; i++) {
+    for (var i = 1; i <= images; i++) {
       addimg(i);
   };
-  images_left=0;
+  images=0;
 }
 
 };
@@ -48,7 +97,6 @@ function scrollopac() {
         var middle = ($( window ).height()/2) + $(window).scrollTop();
         var middlepic = $(this).offset().top + 350;
         var difference = Math.abs(middle-middlepic);
-        console.log(difference);
         if (difference < ($(this).height()/2) + ($( window ).height())/2) {
          var opacvar = 150/difference;
 
@@ -86,4 +134,30 @@ $(document).ready(function() {
 
 
   });
+
+  $( "#3ddesignbutton" ).click(function() {
+  $( "#thecontainer" ).empty();
+  whichcategory = 1;
+  $( "#thecontainer" ).css('display', 'none');
+  add5images();
+  $( "#thecontainer" ).fadeIn();
+  $( "#graphic" ).removeClass( "active" )
+  $( "#3d" ).addClass( "active" )
+});
+
+
+
+  $( "#graphicdesignbutton" ).click(function() {
+  $( "#thecontainer" ).empty();
+  whichcategory = 0;
+    $( "#thecontainer" ).css('display', 'none');
+  add5images();
+   $( "#thecontainer" ).fadeIn();
+  $( "#graphic" ).addClass( "active" )
+  $( "#3d" ).removeClass( "active" )
+});
+
+
+
+
 });
