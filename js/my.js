@@ -115,26 +115,36 @@ function addabout() {
 $( "#thecontainer" ).append( "<div class='aboutcontainer'><h1 class = 'abouth1'>Hello.</h1><p class='biop'>My name is <em class = 'name'>Sean Hughes</em> and I'm a web, graphic, and 3D designer.</p><p class='biop'>I am currently a computer science major at Harvard University, and a competitive squash player both indivudally and for Harvard's team.</p><p class = 'biop'>Contact me through my <a class = 'bioa' href='#'>Email</a>, or <a class = 'bioa' href='#'>Give me a call</a> if you'd like to talk.</p></div>" );
 }
 
+// Making the Menu Close on Click:
+
+$(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+        $(this).collapse('hide');
+    }
+});
+
+//  Adding images and scroll effects at start
+
 $(document).ready(function() {
       add5images();
       scrollopac();
-      var whattopwas = $('#navbar').offset().top;
+      var whattopwas = $('#staticbar').offset().top;
   $(window).scroll(function () {
 
       //if you hard code, then use console
       //.log to determine when you want the 
       //nav bar to stick.  
     if ($(window).scrollTop() >= whattopwas) {
-      $('#navbar').addClass('fixdis');
+      $('#staticbar').addClass('navbar-fixed-top');
       $('#thecontainer').addClass('spacedis');
-
     }
     else if ($(window).scrollTop() < whattopwas) {
       var opacvar = (420-(2*$(window).scrollTop()))/420;
       $('#fadeouttitle').css('opacity', opacvar);
       $('#fadeouttitle').css('top', $(window).scrollTop());
-      $('#navbar').removeClass('fixdis');
+      $('#staticbar').removeClass('navbar-fixed-top');
       $('#thecontainer').removeClass('spacedis');
+      
     }
 //fading in stuff here:::::
    
