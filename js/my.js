@@ -123,6 +123,16 @@ $(document).on('click','.navbar-collapse.in',function(e) {
     }
 });
 
+// Adding onClick effects for mobile
+
+$( ".coverdis" ).click(function() {
+  console.log('deez');
+});
+
+
+
+
+
 //  Adding images and scroll effects at start
 
 $(document).ready(function() {
@@ -134,6 +144,7 @@ $(document).ready(function() {
       //if you hard code, then use console
       //.log to determine when you want the 
       //nav bar to stick.  
+    if($(window).width() >500) {
     if ($(window).scrollTop() >= whattopwas) {
       $('#staticbar').addClass('navbar-fixed-top');
       $('#thecontainer').addClass('spacedis');
@@ -146,6 +157,7 @@ $(document).ready(function() {
       $('#thecontainer').removeClass('spacedis');
       
     }
+  }
 //fading in stuff here:::::
    
       scrollopac();
@@ -190,6 +202,20 @@ $(document).ready(function() {
   scrollopac();
 });
 
+if($(window).width() <= 500) {
+     setInterval(function(){ if ($(window).scrollTop() >= whattopwas) {
+      $('#staticbar').addClass('navbar-fixed-top');
+      $('#thecontainer').addClass('spacedis');
+    }
+    else if ($(window).scrollTop() < whattopwas) {
+      var opacvar = (420-(2*$(window).scrollTop()))/420;
+      $('#fadeouttitle').css('opacity', opacvar);
+      $('#fadeouttitle').css('top', $(window).scrollTop());
+      $('#staticbar').removeClass('navbar-fixed-top');
+      $('#thecontainer').removeClass('spacedis');
+      
+    }; }, 16);
 
+}
 
 });
