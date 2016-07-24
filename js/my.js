@@ -1,9 +1,14 @@
 //Constant Varibles
 var ScreenHeight = $(window).height();
 var NavOffset = $('#staticbar').offset().top;
+var Phone = IsPhone();
 
 function addimg(i, array) {
-    $("#thecontainer").append("<div class='bigim'><img class = 'theim' src='images/blog/" + array[i].image + "''><div class='coverdis'><img id='whitebow' src='images/whitebow.svg'><div class='hovert'><h1 class='hovertitle animated bounceInLeft'>" + array[i].title + "</h1><p class = 'hovertext'>" + array[i].pg + "</p></div></div></div>");
+    if (!Phone) {
+        $("#thecontainer").append("<div class='bigim'><img class = 'theim' src='images/blog/" + array[i].image + "''><div class='coverdis'><img id='whitebow' src='images/whitebow.svg'><div class='hovert'><h1 class='hovertitle animated bounceInLeft'>" + array[i].title + "</h1><p class = 'hovertext'>" + array[i].pg + "</p></div></div></div>");
+    } else {
+        $("#thecontainer").append("<div class='bigim'><img class = 'theim' src='images/blog/mobile/" + array[i].image + "''><div class='coverdis'><img id='whitebow' src='images/whitebow.svg'><div class='hovert'><h1 class='hovertitle animated bounceInLeft'>" + array[i].title + "</h1><p class = 'hovertext'>" + array[i].pg + "</p></div></div></div>");
+    }
 }
 
 // Function adds images to the page
@@ -21,7 +26,9 @@ function AddImages(type) {
 
 // Function checks to see if the computer is a phone
 function IsPhone() {
-    if ($(window).width() < 500) {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true;
+    } else if ($(window).width() < 500){
         return true;
     } else {
         return false;
@@ -72,13 +79,12 @@ function addabout() {
 function Navigate(location) {
     $("#thecontainer").empty();
     $("#thecontainer").css('display', 'none');
-    $(".theim", this).css('opacity', .3);
     AddImages(location);
     $("#thecontainer").fadeIn();
     $("#navbar ul>li.active").removeClass("active");
     $("#" + location).addClass("active")
     if (!Phone) {
-        ScrollOpacity();
+        $(".theim").css('opacity', .3);
     }
 }
 
@@ -97,7 +103,6 @@ $(document).on('click', '.navbar-collapse.in', function(e) {
 //  Adding images and scroll effects at start
 
 $(document).ready(function() {
-    var Phone = IsPhone();
     AddImages("graphic");
     if (Phone == true) {
         $('#staticbar').addClass('navbar-fixed-top');
