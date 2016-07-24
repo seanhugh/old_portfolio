@@ -52,11 +52,13 @@
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
 }
-/*.coverdis:hover, */.coverdis:active{
+.coverdis:hover, .coverdis:hover_effect{
 	opacity:1;
 	cursor: url("cssimages/popup-cursor.png") 25 25,auto;
 
 }
+
+
 .bigim{
 	position:relative;
 	height:auto;

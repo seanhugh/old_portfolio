@@ -128,6 +128,17 @@ $(document).on('click','.navbar-collapse.in',function(e) {
 
 $(document).ready(function() {
       add5images();
+
+
+      
+               //adding click effects for mobile
+         $('.hover').bind('touchstart touchend', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('hover_effect');
+    });
+
+
+
       if($(window).width() >500) {
          scrollopac();
       }
@@ -135,10 +146,10 @@ $(document).ready(function() {
       var whattopwas = $('#staticbar').offset().top;
       if($(window).width() <500) {
          $('#staticbar').addClass('navbar-fixed-top');
-         //adding click effects for mobile
-         $('.coverdis').each(function(){
-         this.onclick = function() {}
-        });
+
+
+
+
       }
   $(window).scroll(function () {
       //if you hard code, then use console
