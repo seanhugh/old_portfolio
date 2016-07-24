@@ -122,18 +122,6 @@ $(document).on('click','.navbar-collapse.in',function(e) {
     }
 });
 
-// Adding onClick effects for mobile
-
-$( ".coverdis" ).click(function() {
-  console.log('deez');
-});
-$( ".bigim img" ).click(function() {
-  console.log('deez');
-});
-$( ".coverdis" ).click(function() {
-  console.log('deez');
-});
-
 
 
 //  Adding images and scroll effects at start
@@ -147,6 +135,7 @@ $(document).ready(function() {
       var whattopwas = $('#staticbar').offset().top;
       if($(window).width() <500) {
          $('#staticbar').addClass('navbar-fixed-top');
+         //adding click effects for mobile
          $('.coverdis').each(function(){
          this.onclick = function() {}
         });

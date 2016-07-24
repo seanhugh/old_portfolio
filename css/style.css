@@ -52,7 +52,7 @@
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
 }
-.coverdis:hover{
+/*.coverdis:hover, */.coverdis:active{
 	opacity:1;
 	cursor: url("cssimages/popup-cursor.png") 25 25,auto;
 
