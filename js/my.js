@@ -140,6 +140,7 @@ $(document).ready(function() {
       scrollopac();
       var whattopwas = $('#staticbar').offset().top;
   $(window).scroll(function () {
+    console.log(whattopwas);
       //if you hard code, then use console
       //.log to determine when you want the 
       //nav bar to stick.  
