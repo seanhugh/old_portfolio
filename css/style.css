@@ -147,7 +147,9 @@ em.name {
 	padding-left: 0;
     padding-right: 0;
 }
-
+.theim{
+	opacity: .3;
+}
 
 
 /*MOBILE STUFF GOES HERE*/
