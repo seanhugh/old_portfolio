@@ -94,7 +94,6 @@ if (images>=50) {
 
 function scrollopac() {
       $('.bigim').each(function(){
-        var _this = this;
         var middle = ($( window ).height()/2) + $(window).scrollTop();
         var middlepic = $(this).offset().top + 350;
         var difference = Math.abs(middle-middlepic);
@@ -107,7 +106,7 @@ function scrollopac() {
           $(".theim", this).css('opacity', .3);
         }
 
-
+  
         });
 };
 
@@ -128,8 +127,12 @@ $(document).on('click','.navbar-collapse.in',function(e) {
 $( ".coverdis" ).click(function() {
   console.log('deez');
 });
-
-
+$( ".bigim img" ).click(function() {
+  console.log('deez');
+});
+$( ".coverdis" ).click(function() {
+  console.log('deez');
+});
 
 
 
@@ -146,7 +149,6 @@ $(document).ready(function() {
          $('#staticbar').addClass('navbar-fixed-top');
       }
   $(window).scroll(function () {
-    console.log(whattopwas);
       //if you hard code, then use console
       //.log to determine when you want the 
       //nav bar to stick.  
