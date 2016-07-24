@@ -147,6 +147,9 @@ $(document).ready(function() {
       var whattopwas = $('#staticbar').offset().top;
       if($(window).width() <500) {
          $('#staticbar').addClass('navbar-fixed-top');
+         $('.coverdis').each(function(){
+         this.onclick = function() {}
+        });
       }
   $(window).scroll(function () {
       //if you hard code, then use console
