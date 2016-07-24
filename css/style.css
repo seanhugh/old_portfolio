@@ -131,7 +131,7 @@ em.name {
 	margin-top: 0px!important;
 }
 .spacedis{
-	margin-top: 112px;
+	margin-top: 92px;
 }
 #mobilebow{
     width: 50px;
@@ -178,7 +178,12 @@ em.name {
 #mobilebow{
 	display: block;
 }
-
+#fadeouttitle{
+	display: none;
+}
+.img-container{
+	margin-top: 92px;
+}
 }
 
 

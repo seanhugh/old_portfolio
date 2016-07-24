@@ -137,8 +137,14 @@ $( ".coverdis" ).click(function() {
 
 $(document).ready(function() {
       add5images();
-      scrollopac();
+      if($(window).width() >500) {
+         scrollopac();
+      }
+      
       var whattopwas = $('#staticbar').offset().top;
+      if($(window).width() <500) {
+         $('#staticbar').addClass('navbar-fixed-top');
+      }
   $(window).scroll(function () {
     console.log(whattopwas);
       //if you hard code, then use console
@@ -154,13 +160,14 @@ $(document).ready(function() {
       $('#fadeouttitle').css('opacity', opacvar);
       $('#fadeouttitle').css('top', $(window).scrollTop());
       $('#staticbar').removeClass('navbar-fixed-top');
-      $('#thecontainer').removeClass('spacedis');
-      
+      $('#thecontainer').removeClass('spacedis');    
     }
+
   }
 //fading in stuff here:::::
-   
-      scrollopac();
+      if($(window).width() >500) {
+         scrollopac();
+      }
 
 //my stuff ends here
 
@@ -201,6 +208,21 @@ $(document).ready(function() {
   $( "#about" ).addClass( "active" )
   scrollopac();
 });
+
+// FOR MOBILE MAKING THE CLICK BRING UP THE SCREEN
+
+//   $( "#3ddesignbutton" ).click(function() {
+//   $( "#thecontainer" ).empty();
+//   whichcategory = 1;
+//   $( "#thecontainer" ).css('display', 'none');
+//   add5images();
+//   $( "#thecontainer" ).fadeIn();
+//   $("#navbar ul>li.active").removeClass("active");
+//   $( "#3d" ).addClass( "active" )
+//   scrollopac();
+// });
+
+
 
 
 });
