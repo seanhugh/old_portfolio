@@ -47,7 +47,7 @@
 
 .coverdis {
     /*background-color: rgba(255,255,255,.8);*/
-    background-color: rgba(175, 143, 92, 0.89);
+        background-color: rgba(255, 138, 101, 0.89);
     position: absolute;
     top: 0;
     left: 0;
@@ -178,6 +178,31 @@ em.name {
     opacity: .3;
 }
 
+
+/*Changing the Styling here */
+
+.navbar-inverse {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border:none;
+}
+div#fadeouttitle {
+    background-color: #ffffff;
+}
+.navbar-inverse .navbar-nav>.active>a {
+    background-color: #fafafa;
+    color:#424242;
+}
+.navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{
+    background-color: #fafafa;
+    color:#424242;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #9e9e9e;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #424242;
+}
 
 /*MOBILE STUFF GOES HERE*/
 
