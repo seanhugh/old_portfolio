@@ -1,7 +1,8 @@
 //Constant Varibles
 var ScreenHeight = $(window).height();
-var NavOffset = $('#staticbar').offset().top;
 var Phone = IsPhone();
+var NavOffset = $('#staticbar').offset().top;
+var isFixed = false;
 
 function addimg(i, array) {
     if (!Phone) {
@@ -28,7 +29,7 @@ function AddImages(type) {
 function IsPhone() {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         return true;
-    } else if ($(window).width() < 500){
+    } else if ($(window).width() < 500) {
         return true;
     } else {
         return false;
@@ -39,12 +40,14 @@ function NavBar() {
     var scrollTop = $(window).scrollTop();
     if (scrollTop >= NavOffset) {
         $('#staticbar').addClass('navbar-fixed-top');
+        isFixed = true;
         $('#thecontainer').addClass('spacedis');
     } else {
         var opacvar = (NavOffset - (2 * scrollTop)) / NavOffset;
         $('#fadeouttitle .col-md-4').css('opacity', opacvar);
         $('#fadeouttitle').css('top', scrollTop);
         $('#staticbar').removeClass('navbar-fixed-top');
+        isFixed = false;
         $('#thecontainer').removeClass('spacedis');
     }
 }
@@ -110,7 +113,11 @@ $(document).ready(function() {
 
     if (!Phone) {
 
+
         $(window).scroll(function() {
+            if (!isFixed) {
+                NavOffset = $('#staticbar').offset().top;
+            };
             NavBar();
             ScrollOpacity();
 
