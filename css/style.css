@@ -214,6 +214,13 @@ html {
        overflow-y: scroll!important;
 }
 
+#headerGraphic {
+    height: 420px;
+    background: url(cssimages/Comp-1.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 /*MOBILE STUFF GOES HERE*/
 
 @media screen and (max-width:760px) {
