@@ -46,8 +46,8 @@
 }
 
 .coverdis {
-    /*background-color: rgba(255,255,255,.8);*/
-        background-color: rgba(255, 138, 101, 0.89);
+    background-color: rgba(255,255,255,.8);
+        /*background-color: rgba(255, 138, 101, 0.89);*/
     position: absolute;
     top: 0;
     left: 0;
@@ -87,7 +87,7 @@
 }
 
 .hovert {
-    color: white;
+    color: #616161;
     position: absolute;
     width: 100%;
     bottom: 100px;
@@ -182,7 +182,7 @@ em.name {
 /*Changing the Styling here */
 
 .navbar-inverse {
-    background-color: #ffffff;
+    background-color: #616161;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     border:none;
 }
@@ -190,18 +190,24 @@ div#fadeouttitle {
     background-color: #ffffff;
 }
 .navbar-inverse .navbar-nav>.active>a {
-    background-color: #fafafa;
-    color:#424242;
+    background-color: #424242;
+    color:#BDBDBD;
 }
 .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{
-    background-color: #fafafa;
-    color:#424242;
+    background-color: #424242;
+    color:#BDBDBD;
 }
 .navbar-inverse .navbar-nav>li>a {
-    color: #9e9e9e;
+    color: #eeeeee;
 }
 .navbar-inverse .navbar-nav>li>a:hover {
-    color: #424242;
+    color: #BDBDBD;
+}
+
+.navbar-nav>li>a{
+    transition: color .25s ease-in-out;
+    -moz-transition: color .25s ease-in-out;
+    -webkit-transition: color .25s ease-in-out;
 }
 
 /*MOBILE STUFF GOES HERE*/
