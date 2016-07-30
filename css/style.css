@@ -46,7 +46,7 @@
 }
 
 .coverdis {
-    background-color: rgba(255,255,255,.8);
+    background-color: rgba(255,255,255,.89);
         /*background-color: rgba(255, 138, 101, 0.89);*/
     position: absolute;
     top: 0;
@@ -61,7 +61,7 @@
 
 .coverdis:hover {
     opacity: 1;
-    cursor: url("cssimages/popup-cursor.png") 25 25, auto;
+    cursor: url("cssimages/cursor.png") 25 25, auto;
 }
 
 .bigim {
@@ -101,7 +101,7 @@
     margin-left: 50px;
 }
 
-#whitebow {
+#popupX {
     transition: all 300ms 100ms;
     position: absolute;
     width: 0px;
@@ -110,7 +110,7 @@
     transform: translate(-50%);
 }
 
-.coverdis:hover #whitebow {
+.coverdis:hover #popupX {
     width: 10%
 }
 
@@ -161,11 +161,11 @@ em.name {
 }
 
 #mobilebow {
-    width: 50px;
+    width: 32px;
     position: absolute;
     left: 50%;
     margin-left: -25px !important;
-    margin-top: 4px;
+    margin-top: 6px;
     display: none;
 }
 
@@ -208,6 +208,10 @@ div#fadeouttitle {
     transition: color .25s ease-in-out;
     -moz-transition: color .25s ease-in-out;
     -webkit-transition: color .25s ease-in-out;
+}
+
+html {
+       overflow-y: scroll!important;
 }
 
 /*MOBILE STUFF GOES HERE*/
