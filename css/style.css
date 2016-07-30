@@ -258,4 +258,7 @@ html {
     .theim {
         opacity: 1;
     }
+    #headerGraphic {
+    display: none;
+}
 }
