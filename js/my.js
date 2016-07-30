@@ -42,7 +42,7 @@ function NavBar() {
         $('#thecontainer').addClass('spacedis');
     } else {
         var opacvar = (NavOffset - (2 * scrollTop)) / NavOffset;
-        $('#fadeouttitle').css('opacity', opacvar);
+        $('#fadeouttitle .col-md-4').css('opacity', opacvar);
         $('#fadeouttitle').css('top', scrollTop);
         $('#staticbar').removeClass('navbar-fixed-top');
         $('#thecontainer').removeClass('spacedis');
@@ -73,7 +73,7 @@ function ScrollOpacity() {
 
 // This function adds the about section to the page
 function addabout() {
-    $("#thecontainer").append("<div class='aboutcontainer'><h1 class = 'abouth1'>Hello.</h1><p class='biop'>My name is <em class = 'name'>Sean Hughes</em> and I'm a web, graphic, and 3D designer.</p><p class='biop'>I am currently a computer science major at Harvard University, and a competitive squash player both indivudally and for Harvard's team.</p><p class = 'biop'>Contact me through my <a class = 'bioa' href='#'>Email</a>, or <a class = 'bioa' href='#'>Give me a call</a> if you'd like to talk.</p></div>");
+    $("#thecontainer").append("<div class='aboutcontainer'><h1 class = 'abouth1'>Hello.</h1><p class='biop'>My name is <em class = 'name'>Sean Hughes</em> and I'm a <a class='bioa'>coder</a>, and designer.</p><p class='biop'>I am currently a computer science major at Harvard University, and a competitive squash player both indivudally and for Harvard's team.</p><p class = 'biop'>Contact me through my <a class = 'bioa' href='#'>Email</a>, or <a class = 'bioa' href='#'>Give me a call</a> if you'd like to talk.</p></div>");
 }
 
 function Navigate(location) {
