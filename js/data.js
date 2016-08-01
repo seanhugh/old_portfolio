@@ -49,4 +49,21 @@ var ThreeDArray = [{
     pg: "My design has gained popularity in Alaska and is <br> now on muliple people as tatoos",
 }];
 
-var deez = 6;
+// An array to hold the image location, title, and description for Coding Page. 
+var CodingArray = [{
+    image: "website.png",
+    title: "A website to showcase my <br>coding and design",
+    pg: "This website was made from scratch <br> using HTML, Javascript, and CSS",
+}, {
+    image: "euler.png",
+    title: "Project Euler Problems",
+    pg: "Some basic problems done in <br> python during high school",
+}, {
+    image: "website.png",
+    title: "Unique Hand Made<br> Ping Pong Paddle",
+    pg: "This unique paddle not only looks the part <br> but also provides extra spin and power",
+}, {
+    image: "euler.png",
+    title: "Glass decal of wolf and dolphin design",
+    pg: "My design has gained popularity in Alaska and is <br> now on muliple people as tatoos",
+}];

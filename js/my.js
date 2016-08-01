@@ -4,11 +4,11 @@ var Phone = IsPhone();
 var NavOffset = $('#staticbar').offset().top;
 var isFixed = false;
 
-function addimg(i, array) {
+function addimg(i, array, location) {
     if (!Phone) {
-        $("#thecontainer").append("<div class='bigim'><img class = 'theim' src='images/blog/" + array[i].image + "''><div class='coverdis'><img id='popupX' src='images/popupX.svg'><div class='hovert'><h1 class='hovertitle animated bounceInLeft'>" + array[i].title + "</h1><p class = 'hovertext'>" + array[i].pg + "</p></div></div></div>");
+        $("#thecontainer").append("<div class='bigim'><img class = 'theim' src='images/" + location + '/' + array[i].image + "''><div class='coverdis'><img id='popupX' src='images/popupX.svg'><div class='hovert'><h1 class='hovertitle animated bounceInLeft'>" + array[i].title + "</h1><p class = 'hovertext'>" + array[i].pg + "</p></div></div></div>");
     } else {
-        $("#thecontainer").append("<div class='bigim'><img class = 'theim' src='images/blog/mobile/" + array[i].image + "''><div class='coverdis'><img id='popupX' src='images/popupX.svg'><div class='hovert'><h1 class='hovertitle animated bounceInLeft'>" + array[i].title + "</h1><p class = 'hovertext'>" + array[i].pg + "</p></div></div></div>");
+        $("#thecontainer").append("<div class='bigim'><img class = 'theim' src='images/" + location + '/' + 'mobile/' + array[i].image + "''><div class='coverdis'><img id='popupX' src='images/popupX.svg'><div class='hovert'><h1 class='hovertitle animated bounceInLeft'>" + array[i].title + "</h1><p class = 'hovertext'>" + array[i].pg + "</p></div></div></div>");
     }
 }
 
@@ -16,11 +16,15 @@ function addimg(i, array) {
 function AddImages(type) {
     if (type == "graphic") {
         for (var i = 0; i <= (GraphicArray.length - 1); i++) {
-            addimg(i, GraphicArray);
+            addimg(i, GraphicArray, type);
         }
     } else if (type == "3d") {
         for (var i = 0; i <= (ThreeDArray.length - 1); i++) {
-            addimg(i, ThreeDArray);
+            addimg(i, ThreeDArray, type);
+        }
+    } else if (type == "coding") {
+        for (var i = 0; i <= (CodingArray.length - 1); i++) {
+            addimg(i, CodingArray, type);
         }
     }
 };
@@ -108,7 +112,7 @@ $(document).on('click', '.navbar-collapse.in', function(e) {
 //  Adding images and scroll effects at start
 
 $(document).ready(function() {
-    AddImages("graphic");
+    AddImages("coding");
     if (Phone == true) {
         $('#staticbar').addClass('navbar-fixed-top');
     }
@@ -131,11 +135,11 @@ $(document).ready(function() {
     $("#3ddesignbutton").click(function() {
         Navigate("3d");
     });
-
-
-
     $("#graphicdesignbutton").click(function() {
         Navigate("graphic");
+    });
+    $("#codingbutton").click(function() {
+        Navigate("coding");
     });
 
     $("#aboutbutton").click(function() {
