@@ -53,11 +53,11 @@ var ThreeDArray = [{
 var CodingArray = [{
     image: "website.png",
     title: "A website to showcase my <br>coding and design",
-    pg: "This website was made from scratch <br> using HTML, Javascript, and CSS",
+    pg: "Click to view the project on Github",
 }, {
     image: "euler.png",
     title: "Project Euler Problems",
-    pg: "Some basic problems done in <br> python during high school",
+    pg: "Click to view the project on Github",
 }, {
     image: "website.png",
     title: "Unique Hand Made<br> Ping Pong Paddle",

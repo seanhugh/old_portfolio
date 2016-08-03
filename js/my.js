@@ -4,11 +4,20 @@ var Phone = IsPhone();
 var NavOffset = $('#staticbar').offset().top;
 var isFixed = false;
 
+
+function openWindow(id) {
+   if(!$('#big' + id).hasClass('open')){
+   $('#big' + id).addClass('open');
+}else{
+   $('#big' + id).removeClass('open');
+}
+}
+
 function addimg(i, array, location) {
     if (!Phone) {
-        $("#thecontainer").append("<div class='bigim'><img class = 'theim' src='images/" + location + '/' + array[i].image + "''><div class='coverdis'><img id='popupX' src='images/popupX.svg'><div class='hovert'><h1 class='hovertitle animated bounceInLeft'>" + array[i].title + "</h1><p class = 'hovertext'>" + array[i].pg + "</p></div></div></div>");
+        $("#thecontainer").append("<div id = 'big"+ location + i +"'class='bigim'><img class = 'theim' src='images/" + location + '/' + array[i].image + "''><div class='coverdis'></div><div class = 'textContain'><div class='hovert'><h2 class='hovertitle animated bounceInLeft'>" + array[i].title + "</h2><p class = 'hovertext'>" + array[i].pg + "</p></div></div><button id ='" + location + i +"'class='mdl-button mdl-js-button mdl-button--fab mdl-button--colored moreInfo' onClick = 'openWindow(this.id)'><i class='material-icons'>add</i></button></div>");
     } else {
-        $("#thecontainer").append("<div class='bigim'><img class = 'theim' src='images/" + location + '/' + 'mobile/' + array[i].image + "''><div class='coverdis'><img id='popupX' src='images/popupX.svg'><div class='hovert'><h1 class='hovertitle animated bounceInLeft'>" + array[i].title + "</h1><p class = 'hovertext'>" + array[i].pg + "</p></div></div></div>");
+        $("#thecontainer").append("<div id = 'big"+ location + i +"'class='bigim mobile'><img class = 'theim' src='images/" + location + '/mobile/' + array[i].image + "''><div class='coverdis'></div><button id ='" + location + i +"'class='mdl-button mdl-js-button mdl-button--fab mdl-button--colored moreInfo' onClick = 'openWindow(this.id)'><i class='material-icons'>add</i><div class = 'textContain'><div class='hovert'><h2 class='hovertitle animated bounceInLeft'>" + array[i].title + "</h2><p class = 'hovertext'>" + array[i].pg + "</p></div></div></button></div>");
     }
 }
 
@@ -150,5 +159,4 @@ $(document).ready(function() {
         $("#navbar ul>li.active").removeClass("active");
         $("#about").addClass("active")
     });
-
 });
