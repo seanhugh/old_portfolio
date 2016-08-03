@@ -109,9 +109,10 @@ $(document).ready(function() {
                 $('#theGraphic').fadeIn();
                 $('.navbar-brand').fadeOut();
             }
-            if($(window).scrollTop()>=194){
+            
+            if(!Phone && $(window).scrollTop()>=194){
                 $('#fakeShadow').css('opacity', 1);
-            } else{
+            } else if (!Phone){
                 $('#fakeShadow').css('opacity', 0);
             }
             ScrollOpacity();

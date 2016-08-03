@@ -260,14 +260,14 @@ html {
 }
 #theGraphic {
     background-image: url(../images/logo.svg);
-    width: 600px;
+    width: 450px;
     height: 191px;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
     top: 64px;
     float: right;
-    margin-right: 50%;
+    margin-right: 60%;
 }
 .navbar-brand{
     display: none;
@@ -309,13 +309,21 @@ html {
     #fadeouttitle {
         display: none;
     }
-    .img-container {
-        margin-top: 92px;
-    }
     .theim {
         opacity: 1;
     }
+    #theGraphic{
+        display: none;
+    }
+    .fakeShadow{
+        display: none;
+    }
+    #fakeShadow{
+        top:64px;
+        display:block;
+        opacity: 1;
+    }
     #headerGraphic {
-    display: none;
+        height:64px;
 }
 }
