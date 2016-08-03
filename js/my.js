@@ -48,25 +48,6 @@ function IsPhone() {
         return false;
     }
 };
-
-function NavBar() {
-    var scrollTop = $(window).scrollTop();
-    if (scrollTop >= NavOffset) {
-        $('#staticbar').addClass('navbar-fixed-top');
-        isFixed = true;
-        $('#thecontainer').addClass('spacedis');
-        $('#mobilebow').fadeIn();
-    } else {
-        var opacvar = (NavOffset - (2 * scrollTop)) / NavOffset;
-        $('#fadeouttitle .col-md-4').css('opacity', opacvar);
-        $('#fadeouttitle').css('top', scrollTop);
-        $('#staticbar').removeClass('navbar-fixed-top');
-        isFixed = false;
-        $('#thecontainer').removeClass('spacedis');
-        $('#mobilebow').fadeOut();
-    }
-}
-
 // This function sets the opacity for all images within the viewable range
 function ScrollOpacity() {
 
@@ -101,9 +82,6 @@ function Navigate(location) {
     $("#thecontainer").fadeIn();
     $("#navbar ul>li.active").removeClass("active");
     $("#" + location).addClass("active")
-    if (!Phone) {
-        $(".theim").css('opacity', .3);
-    }
 }
 
 
@@ -122,21 +100,21 @@ $(document).on('click', '.navbar-collapse.in', function(e) {
 
 $(document).ready(function() {
     AddImages("coding");
-    if (Phone == true) {
-        $('#staticbar').addClass('navbar-fixed-top');
-    }
-
     if (!Phone) {
-
-
         $(window).scroll(function() {
-            if (!isFixed) {
-                NavOffset = $('#staticbar').offset().top;
-            };
-            NavBar();
+            if($(window).scrollTop()>0 && $('#theGraphic').css('display') != 'none'){
+                $('#theGraphic').fadeOut();
+                $('.navbar-brand').fadeIn();
+            } else if ($(window).scrollTop()==0){
+                $('#theGraphic').fadeIn();
+                $('.navbar-brand').fadeOut();
+            }
+            if($(window).scrollTop()>=194){
+                $('#fakeShadow').css('opacity', 1);
+            } else{
+                $('#fakeShadow').css('opacity', 0);
+            }
             ScrollOpacity();
-
-
         });
     };
 

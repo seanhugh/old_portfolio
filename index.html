@@ -23,12 +23,12 @@
         <div class="col-md-2"></div>
     </div> -->
     <div id = "headerGraphic">
-    </div>
-    <!-- NAVBAR #2 -->
-    <nav id="staticbar" class="navbar navbar-inverse">
+        <nav id="staticbar" class="navbar navbar-inverse navbar-fixed-top">
+
         <div class="container">
             <img id='mobilebow' src='images/whitebow.svg'>
             <div class="navbar-header">
+                <a class="navbar-brand"><img src="./images/logo.svg"></a>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -37,7 +37,7 @@
                 </button>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-right">
                     <li id="coding" class="active"><a id="codingbutton">Coding</a></li>
                     <li id="graphic"><a id="graphicdesignbutton">Grapic Design</a></li>
                     <li id="3d"><a id="3ddesignbutton">3D Design</a></li>
@@ -51,7 +51,13 @@
             <!--/.nav-collapse -->
         </div>
         <!--/.container-fluid -->
+        <div id='fakeShadow' class='fakeShadow'></div>
     </nav>
+    <div class='fakeShadow' style='opacity:1; bottom:inherit; top:255px;'></div>
+    <div id = 'theGraphic'></div>
+    </div>
+    <!-- NAVBAR #2 -->
+    
     <div id="thecontainer" class="img-container">
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
