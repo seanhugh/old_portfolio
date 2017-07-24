@@ -1,0 +1,34 @@
+.affa-info-txt-startup {
+	text-align:center;
+	margin-bottom:40px;
+}
+.row-sep-border-startup .affa-info-txt-startup { margin-bottom:0px; }
+	.affa-info-txt-startup .ion {
+		color:#DDD;
+		font-size:64px;
+		line-height:1;
+		margin-bottom:15px;
+	}
+	.bg-grey .affa-info-txt-startup .ion { color:#d0d0d0; }
+	.text-white .affa-info-txt-startup .ion { color:rgba(255,255,255,.3); }
+	.ie .text-white .affa-info-txt-startup .ion { color:#FFF; }
+	.affa-info-txt-startup h4 {
+		font-size:18px;
+		line-height:26px;
+		font-weight:700;
+		text-transform:uppercase;
+		letter-spacing:.5px;
+		margin:0px;
+	}
+	.affa-info-txt-startup p {
+		font-size:16px;
+		margin:15px 0px 0px;
+	}
+  .row-sep-border-startup > div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-right: 1px solid #e9e9e9;
+}
+.row-sep-border-startup > div:last-child {
+    border-right: 0px;
+}
