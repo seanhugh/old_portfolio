@@ -959,6 +959,7 @@
         </div>
         <!-- end Code -->
 
+        <!-- Portfolio -->
         <div id="content" class="archive-portfolio">
 
                     <!-- .container -->
@@ -1193,7 +1194,7 @@
 
         					<div class="col-sm-6 web-design" style="position: absolute; left: 572px; top: 1144px;"> <!-- 12 -->
         						<figure class="img-hover4">
-        							<img src="images/myImages/mason/w2.png" alt="Vimeo FX Showreel">
+        							<img id="loader" src="images/myImages/mason/w2.png" alt="Vimeo FX Showreel">
         							<div class="overlay-masked">
         								<div class="overlay-links">
         									<a href="#" class="link-left" title="Live Preview"><i class="ion ion-link"></i></a>
@@ -1214,6 +1215,7 @@
                     <!-- .container end -->
 
                 </div>
+                <!-- end Portfolio -->
 
         <div class="text-white" data-parallax="scroll" data-speed="0.2" data-natural-width="1280" data-natural-height="852" data-image-src="images/content/bg/philly.jpg">
           <div id="contact" class="bg-dark-overlay70 text-white padding-top100 padding-bottom100">
@@ -1361,7 +1363,15 @@
 
 
 <script>
-setTimeout(function(){ $(window).trigger('resize.px.parallax'); }, 1000);
+
+$(window).bind("load", function() {
+  setTimeout(function(){ $(window).trigger('resize.px.parallax'); }, 500);
+
+});
+
+// $("#loader").load(function() {
+//   setTimeout(function(){ $(window).trigger('resize.px.parallax'); }, 1000);
+// }).attr('src', src);
 
 </script>
 </body>
