@@ -32,3 +32,63 @@
 .row-sep-border-startup > div:last-child {
     border-right: 0px;
 }
+#navigation .nav > li > a {
+  cursor: pointer;
+}
+#header .sub-header2 p {
+    font-size: 26px;
+    line-height: 0px;
+    font-weight: 100;
+    margin: 0px 0px 0px;
+    padding-top: 20px;
+}
+
+.carousel-slider.thisOne .slick-dots li button {
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 500px) {
+.thisOne {
+    margin-bottom: 45px!important;
+}
+}
+
+.text-white .affa-feature-icon-box2 {
+    background-color: rgba(0,0,0,0.45);
+}
+
+.affa-feature-icon-box2 .feature-icon-box-wrap > h4  {
+    color: white;
+}
+.affa-feature-icon-box2 .feature-icon-box-wrap > p  {
+    color: white;
+}
+
+.text-white .affa-feature-icon-box2:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.affa-feature-icon-box2:hover .feature-icon-box-wrap > .ion {
+    background-color: rgba(0,0,0,0);
+}
+
+.affa-feature-icon-box2 .feature-icon-box-wrap > .ion {
+    background-color: rgba(0,0,0,0);
+}
+
+/*.bg-color, .btn-play:hover .ion, .btn-play2, .btn-play2.btn-white:hover, .sep-border-left:before, .post-heading-left2 h2:after, .post-heading-left2 h4:after, .post-heading-center2 h2:after, .post-heading-center2 h4:after, .img-hover3 .overlay-masked a:hover, .carousel-slider .slick-dots li button:hover, .carousel-slider .slick-dots li.slick-active button
+    background-color: rgba(0,0,0,0);
+}
+.affa-feature-icon-box2:hover .feature-icon-box-wrap > .ion {
+    background-color: rgba(0,0,0,0);
+}
+.post-single-footer .tag-links a:hover, .widget_tag_cloud .tagcloud a:hover, #nav-shop-filter .widget_tag_cloud .tagcloud a:hover {
+    background-color: rgba(0,0,0,0.7)!important;
+}*/
+#header .sub-header2 .featuredItem {
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 300;
+    margin-top: 0px;
+    padding-top: 0px;
+}

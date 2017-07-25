@@ -434,8 +434,8 @@
                           <div class="navbar-logo"> <!-- site logo -->
               <div class="navbar-logo-wrap">
                 <a href="index.html">
-                  <img src="images/logo-white-big.png" alt="Logo" class="logo-primary">
-                  <img src="images/logo.png" alt="Logo" class="logo-secondary">
+                  <img src="images/logoWhite.svg" alt="Logo" class="logo-primary" style="height:40px;">
+                  <img src="images/logoBlack.svg" alt="Logo" class="logo-secondary" style="height:40px;">
                 </a>
               </div>
             </div>
@@ -443,19 +443,19 @@
                           <div class="navbar-menu">
                               <ul class="nav">
                                 <li class="menu-item">
-                                    <a href="#">About</a>
+                                    <a id="aboutBut" >About</a>
                                   </li>
                                 <li class="menu-item">
-                                    <a href="#">Work Experience</a>
+                                    <a id="workBut">Work Experience</a>
                                   </li>
                                 <li class="menu-item">
-                                    <a href="#">Code</a>
+                                    <a id="codeBut">Code</a>
                                   </li>
                                 <li class="menu-item">
-                                    <a href="#">Design</a>
+                                    <a id="portfolioBut">Design</a>
                                   </li>
                                 <li class="menu-item">
-                                    <a href="#">Contact</a>
+                                    <a id="contactBut">Contact</a>
                                   </li>
                               </ul>
                           </div>
@@ -476,17 +476,72 @@
 
                   <div class="container">
                       <h1 class="header-title">Sean Hughes</h1>
+                      <p>My Work Portfolio</p>
                   </div>
 
               </div>
+
+
+                    <div class="bg-dark-overlay40 padding-bottom40">
+
+              				<!-- .container -->
+              				<div class="container">
+              					<!-- .row -->
+              					<div class="row">
+
+              						<div class="col-sm-4 "> <!-- 1 -->
+              							<div class="affa-feature-icon-box2">
+              								<div class="feature-icon-box-wrap">
+              									<i class="ion ion-briefcase"></i>
+              									<h4>Business</h4>
+              									<div class="feature-icon-box-desc">
+              										<p class="featuredItem">Lorem ipsum dolor sit, nuc consectetur adipiscing elit fusce cursus leona orci, id pharetra odio varius diem.</p>
+              									</div>
+              								</div>
+              							</div>
+              						</div>
+
+              						<div class="col-sm-4"> <!-- 2 -->
+              							<div class="affa-feature-icon-box2">
+              								<div class="feature-icon-box-wrap">
+              									<i class="ion ion-happy-outline"></i>
+              									<h4>Technology</h4>
+              									<div class="feature-icon-box-desc">
+              										<p class="featuredItem">Lorem ipsum dolor sit, nuc consectetur adipiscing elit fusce cursus leona orci, id pharetra odio varius diem.</p>
+              									</div>
+              								</div>
+              							</div>
+              						</div>
+
+              						<div class="col-sm-4"> <!-- 3 -->
+              							<div class="affa-feature-icon-box2">
+              								<div class="feature-icon-box-wrap">
+              									<i class="ion ion-settings"></i>
+              									<h4>Athletics</h4>
+              									<div class="feature-icon-box-desc">
+              										<p class="featuredItem">Lorem ipsum dolor sit, nuc consectetur adipiscing elit fusce cursus leona orci, id pharetra odio varius diem.</p>
+              									</div>
+              								</div>
+              							</div>
+              						</div>
+
+              					</div>
+              					<!-- .row end -->
+
+              				</div>
+              				<!-- .container end -->
+
+              			</div>
           </div>
           <!-- .sub-header2 end -->
+
 
       </header>
       <!-- #header end -->
 
+
       <!-- #features3 -->
-      <div id="features3" data-parallax="scroll" data-speed="0.2" data-natural-width="1920" data-natural-height="1080" data-image-src="images/content/bg/1.jpg">
+      <div id="about">
           <div class="bg-white padding-top80 padding-bottom80">
 
               <!-- .container -->
@@ -500,7 +555,7 @@
 
                           <h4 class="text-uppercase margin-bottom40">About me</h4>
 
-                          <p>I'm a computer science student at Harvard University. I like to play squash, design, code, and create. <a href="#">Contact me</a> if you have any questions.</p>
+                          <p>I'm a computer science student at Harvard University. I like to play squash, design, code, and create. <a href="#contact">Contact me</a> if you have any questions.</p>
                           <div class="sep-border-icon margin-top20 margin-bottom20">
                                                       	<i class="ion ion-gear-a"></i>
                                                       </div>
@@ -635,7 +690,7 @@
 
 
         <!-- Work Experience -->
-        <div class="text-white" data-parallax="scroll" data-speed="0.2" data-natural-width="1920" data-natural-height="1080" data-image-src="images/content/bg/philly.jpg">
+        <div id="work" class="text-white" data-parallax="scroll" data-speed="0.2" data-natural-width="1920" data-natural-height="1080" data-image-src="images/content/bg/philly.jpg">
           <div class="bg-dark-overlay90 padding-top80 padding-bottom80">
 
       					<!-- .container -->
@@ -643,13 +698,13 @@
 
       						<ul class="nav nav-tabs affa-nav-tabs nav-tabs-center margin-bottom50" role="tablist">
       							<li role="presentation" class="active">
-      								<a href="#tabpanel31" aria-controls="tabpanel31" role="tab" data-toggle="tab" aria-expanded="true">BlueGolf Website</a>
+      								<a href="#tabpanel31" aria-controls="tabpanel33" role="tab" data-toggle="tab" aria-expanded="true">Research and Analysis</a>
       							</li>
       							<li role="presentation" class="">
       								<a href="#tabpanel32" aria-controls="tabpanel32" role="tab" data-toggle="tab" aria-expanded="false">CrowdSurf</a>
       							</li>
       							<li role="presentation" class="">
-      								<a href="#tabpanel33" aria-controls="tabpanel33" role="tab" data-toggle="tab" aria-expanded="false">Research and Analysis</a>
+      								<a href="#tabpanel33" aria-controls="tabpanel31" role="tab" data-toggle="tab" aria-expanded="false">BlueGolf Website</a>
       							</li>
       						</ul>
 
@@ -658,16 +713,22 @@
       								<div class="row">
 
       									<div class="col-md-10 col-lg-6 col-md-offset-1 col-lg-offset-0 margin-bottom40 margin-bottom0-lg">
-      										<figure class="img-video">
-      											<img src="images/myImages/1small.png" alt="Image">
-      										</figure>
+                          <!-- .carousel-slider -->
+                            <div class="carousel-slider thisOne general-slider margin-bottom60">
+                                <div><img src="images/myImages/1small.png" alt="Image"></div>
+                								<div><img src="images/content/portfolios/full/2.jpg" alt="Image"></div>
+                								<div><img src="images/content/portfolios/full/3.jpg" alt="Image"></div>
+                            </div>
+                            <!-- .carousel-slider end -->
       									</div>
 
       									<div class="col-md-10 col-lg-6 col-md-offset-1 col-lg-offset-0">
       										<div class="padding-top10-lg">
-      											<h4 class="text-uppercase"><strong>Creative Solutions</strong></h4>
-      											<p>Lorem ipsum dolor sit, consectetur adipiscing elit. Integer malesuada sem non metus aliquet mattis. In posuere neque ama urna egestas, nonu varius neque consequat. Nullam efficitur lobortis ametin, gravida lacus tincidunt at ipsumia. Nunc velo ultrices mika, vitae lacus fermentum nisi. Vivamus convallis dolor non vehicula fermentum iaculis ipsum. Lorem nunc ipsum dolor consectetur adipiscing elit. Integer malesuada sem non metus aliquet mattis.</p>
-      											<p class="margin-bottom0">Nullam efficitur lobortis ametin, gravida lacus tincidunt at ipsumia. Nunc velo ultrices mika, vitae lacus fermentum nisi. Vivamus convallis dolor non vehicula fermentum iaculis ipsum. Lorem nunc ipsum dolor consectetur adipiscing elit. Integer malesuada sem non metus aliquet mattis denim mika. Nullam efficitur lobortis ametin, gravida lacus tincidunt lipsum.</p>
+      											<h4 class="text-uppercase"><strong>BlueGolf Marketing Website</strong></h4>
+      											<p>A series of landing pages and product information pages for a golf technology company called BlueGolf. </p>
+                            <p><strong>Goal:</strong> Convert visitors to the BlueGolf websites into customers and active users.</p>
+                            <p><strong>Process:</strong> </p>
+       											<p class="margin-bottom0">Nullam efficitur lobortis ametin, gravida lacus tincidunt at ipsumia. Nunc velo ultrices mika, vitae lacus fermentum nisi. Vivamus convallis dolor non vehicula fermentum iaculis ipsum. Lorem nunc ipsum dolor consectetur adipiscing elit. Integer malesuada sem non metus aliquet mattis denim mika. Nullam efficitur lobortis ametin, gravida lacus tincidunt lipsum.</p>
       										</div>
       									</div>
 
@@ -716,7 +777,7 @@
         <!-- End Work Experience -->
 
         <!-- Code -->
-        <div id="blog" class="bg-grey padding-top80 padding-bottom80">
+        <div id="code" class="bg-grey padding-top80 padding-bottom80">
 
             <!-- .container -->
             <div class="container">
@@ -960,7 +1021,7 @@
         <!-- end Code -->
 
         <!-- Portfolio -->
-        <div id="content" class="archive-portfolio">
+        <div id="portfolio" class="archive-portfolio">
 
                     <!-- .container -->
                     <div class="container">
@@ -1217,7 +1278,7 @@
                 </div>
                 <!-- end Portfolio -->
 
-        <div class="text-white" data-parallax="scroll" data-speed="0.2" data-natural-width="1280" data-natural-height="852" data-image-src="images/content/bg/philly.jpg">
+        <div id="contact" class="text-white" data-parallax="scroll" data-speed="0.2" data-natural-width="1280" data-natural-height="852" data-image-src="images/content/bg/philly.jpg">
           <div id="contact" class="bg-dark-overlay70 text-white padding-top100 padding-bottom100">
 
                     <!-- .container -->
@@ -1363,15 +1424,38 @@
 
 
 <script>
-
+// Loading for the bottom parallax
 $(window).bind("load", function() {
   setTimeout(function(){ $(window).trigger('resize.px.parallax'); }, 500);
 
 });
 
-// $("#loader").load(function() {
-//   setTimeout(function(){ $(window).trigger('resize.px.parallax'); }, 1000);
-// }).attr('src', src);
+$("#aboutBut").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#about").offset().top  - 50
+    }, 500);
+});
+
+$("#workBut").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#work").offset().top  - 50
+    }, 500);
+});
+$("#codeBut").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#code").offset().top  - 50
+    }, 500);
+});
+$("#portfolioBut").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#portfolio").offset().top - 50
+    }, 500);
+});
+$("#contactBut").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#contact").offset().top - 50
+    }, 500);
+});
 
 </script>
 </body>
