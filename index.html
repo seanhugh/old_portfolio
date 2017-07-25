@@ -1215,8 +1215,8 @@
 
                 </div>
 
-
-        <div id="contact" class="padding-top100 padding-bottom100">
+        <div class="text-white" data-parallax="scroll" data-speed="0.2" data-natural-width="1280" data-natural-height="852" data-image-src="images/content/bg/philly.jpg">
+          <div id="contact" class="bg-dark-overlay70 text-white padding-top100 padding-bottom100">
 
                     <!-- .container -->
                     <div class="container">
@@ -1283,6 +1283,7 @@
                     <!-- .container end -->
 
                 </div>
+        </div>
 
         <!-- #footer -->
         <footer id="footer">
@@ -1358,5 +1359,10 @@
     <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 
+
+<script>
+setTimeout(function(){ $(window).trigger('resize.px.parallax'); }, 1000);
+
+</script>
 </body>
 </html>
