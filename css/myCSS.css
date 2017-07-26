@@ -60,8 +60,8 @@
 .affa-feature-icon-box2 .feature-icon-box-wrap > h4  {
     color: white;
 }
-.affa-feature-icon-box2 .feature-icon-box-wrap > p  {
-    color: white;
+.feature-icon-box-desc p  {
+    color: #009cff;
 }
 
 .text-white .affa-feature-icon-box2:hover {
@@ -91,4 +91,15 @@
     font-weight: 300;
     margin-top: 0px;
     padding-top: 0px;
+}
+
+.codeUse {
+    padding-top: 10px;
+    color: #009cff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.affa-feature-icon-left.feature-icon-bg h5 {
+    padding-top: 16px;
 }
